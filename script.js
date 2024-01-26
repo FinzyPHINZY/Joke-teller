@@ -1,4 +1,4 @@
-let audioElement = document.getElementById("audio");
+// let audioElement = document.getElementById("audio");
 const button = document.getElementById("button");
 
 const url = "https://v2.jokeapi.dev/joke/Programming,Dark";
