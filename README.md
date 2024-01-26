@@ -1,33 +1,40 @@
-# My Awesome Project
-Write a short sentence or two about this project and what it does. Be sure to include a link and a screenshot (we're front end devs so we can actually see our work!).
+# My Awesome Joke Teller Web App
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+Welcome to my Joke Teller web app – the laughter generator with a twist! This project utilizes APIs to fetch either dark or programming jokes and then delivers them in a unique way by having a robotic voice speak them out. With a sleek and user-friendly UI adorned with a charming robot gif, get ready to giggle with just a click of a button.
 
-![alt tag](http://placecorgi.com/1200/650)
+![Joke Teller Screenshot](link-to-screenshot)
 
 ## How It's Made:
 
-**Tech used:** HTML, CSS, JavaScript, Framework of choice
+**Tech Stack:** HTML, CSS, JavaScript,
+**API** jokeapi, Speech Synthesis API.
 
-Here's where you can go to town on how you actually built this thing. Write as much as you can here, it's totally fine if it's not too much just make sure you write *something*. If you don't have too much experience on your resume working on the front end that's totally fine. This is where you can really show off your passion and make up for that ten fold.
+I crafted this project by integrating front-end technologies, bringing together a seamless blend of HTML for structure, CSS for styling, and JavaScript to handle the dynamic functionalities. The core of the hilarity lies in the integration with jokeapi, Speech Synthesis API, which fetches jokes based on user preferences. The charming UI is designed to enhance the user experience, with a lively robot gif providing the illusion of the jokes being spoken by a playful companion.
 
-## Optimizations
-*(optional)*
+## Usage:
 
-You don't have to include this section but interviewers *love* that you can not only deliver a final product that looks great but also functions efficiently. Did you write something then refactor it later and the result was 5x faster than the original implementation? Did you cache your assets? Things that you write in this section are **GREAT** to bring up in interviews and you can use this section as reference when studying for technical interviews!
+Click here (https://finzyphinzy.github.io/Joke-teller/)
+
+**OR**
+
+1. Clone the repository: `git clone https://github.com/FinzyPHINZY/Joke-teller.git`
+2. Open `index.html` in your preferred browser.
+3. Click the button to get a dose of humor served with a robotic twist!
+
+## Optimizations:
+
+In the quest for excellence, this project underwent several optimizations to ensure not just a visually appealing product but an efficient one too. Notable optimizations is the code refactoring. These enhancement not only make the app more performant but also serve as valuable talking points in technical interviews.
 
 ## Lessons Learned:
 
-No matter what your experience level, being an engineer means continuously learning. Every time you build something you always have those *whoa this is awesome* or *wow I actually did it!* moments. This is where you should share those moments! Recruiters and interviewers love to see that you're self-aware and passionate about growing.
+Embarking on this project was a journey of continuous learning and discovery. From navigating API integrations to refining the UI for a delightful user experience, each step offered insights and moments of triumph. A key lesson was the functions running in the wrong other opposed to how i laid it out in the flowchart. I made some errors which i was able to fix shortly after highlighting the adaptability and problem-solving skills honed during the development process.
 
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
+Feel free to explore the codebase, and may your days be filled with laughter and learning!
 
-**Palettable:** https://github.com/alecortega/palettable
+## Acknowledgements
 
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
+- Images provided by [GIPHY](https://giphy.com/)
 
-**Patch Panel:** https://github.com/alecortega/patch-panel
+## License
 
-
-
+This project is licensed under the MIT License
