@@ -2,8 +2,8 @@
 
 Welcome to my Joke Teller web app – the laughter generator with a twist! This project utilizes APIs to fetch either dark or programming jokes and then delivers them in a unique way by having a robotic voice speak them out. With a sleek and user-friendly UI adorned with a charming robot gif, get ready to giggle with just a click of a button.
 
-![Joke Teller Screenshot](<img width="960" alt="image" src="https://github.com/FinzyPHINZY/Joke-teller/assets/102292855/851263a0-7311-4606-a66b-6577113ebf45">
-)
+<img width="960" alt="image" src="https://github.com/FinzyPHINZY/Joke-teller/assets/102292855/656ca749-164e-47a1-a575-6531658b7f61">
+
 
 ## How It's Made:
 
