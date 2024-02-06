@@ -1,51 +1,50 @@
-// let audioElement = document.getElementById("audio");
 const button = document.getElementById("button");
+const audioElement = document.getElementById("audio");
 
-const url = "https://v2.jokeapi.dev/joke/Programming,Dark";
+// Disable/Enable Button
+function toggleButton() {
+  button.disabled = !button.disabled;
+}
 
-// User clicks button. Trigger fetch. Run getJokes function;
-button.addEventListener("click", getJokes);
+// VoiceRSS Speech Function
+function tellMe(joke) {
+  const jokeString = joke.trim().replace(/ /g, "%20");
+  // VoiceRSS Speech Parameters
+  VoiceRSS.speech({
+    key: "0976dbdcdd6544c1ac440013430b2ed7",
+    src: jokeString,
+    hl: "en-us",
+    r: 0,
+    c: "mp3",
+    f: "44khz_16bit_stereo",
+    ssml: false,
+  });
+}
 
-function getJokes() {
+// Get jokes from Joke API
+async function getJokes() {
   let joke = "";
-  fetch(url)
-    .then((res) => res.json())
-    .then((data) => {
-      if (joke) {
-        joke = data.joke;
-      } else {
-        joke = `${data.setup} - ${data.delivery}`;
-      }
-      sayJoke(joke);
-      console.log(data);
-    })
-    .catch((error) => console.log(error));
+  const apiUrl = "https://v2.jokeapi.dev/joke/Programming,Dark";
+  try {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    // Assign One or Two Part Joke
+    if (data.setup) {
+      joke = `${data.setup} ... ${data.delivery}`;
+    } else {
+      joke = data.joke;
+    }
+
+    console.log(joke);
+    // Passing Joke to VoiceRSS API
+    tellMe(joke);
+    // Disable Button
+    toggleButton();
+  } catch (error) {
+    // Catch Error Here
+  }
 }
 
-// async function getJokes(url) {
-//   let joke = "";
-//   try {
-//     const response = await fetch(url);
-//     const data = await response.json();
-//     if (data.joke) {
-//       joke = data.joke;
-//     } else {
-//       joke = `${data.setup}...${data.delivery}`;
-//     }
-//     // console.log(joke);
-//     sayJoke(joke);
-//   } catch (error) {
-//     console.log(error);
-//   }
-// }
-
-function sayJoke(joke) {
-  console.log(joke);
-
-  const utterance = new SpeechSynthesisUtterance(joke);
-  utterance.onstart = (event) => console.log("Speech has started", event);
-
-  speechSynthesis.speak(utterance);
-
-  utterance.onend = (event) => console.log("Speech has ended", event);
-}
+// Event Listeners
+button.addEventListener("click", getJokes);
+audioElement.addEventListener("ended", toggleButton);
